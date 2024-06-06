@@ -36,6 +36,8 @@ public class EnviromentTest {
     /*
      * Test strategy for SimpleFactory
      *
+     * Partition for SimpleFactory.getTypeParserFactory(inputs):
+     *  通过给定的环境与文件解析器名称，测试能否正确得到文件解析器
      */
 
     @Test
