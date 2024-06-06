@@ -47,6 +47,7 @@ public class CoffeeStoreTest {
      * Test strategy for CoffeeStore
      *
      * Partition for CoffeeStore.orderCoffee():
+     *                              检测是否能产生Coffee对象（不为null），并且其field符合CoffeeFactory设置
      *
      * Partition for the inputs of CoffeeStore.orderFlavour(inputs):
      *                              inputs:normal inputs,empty inputs

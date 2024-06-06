@@ -51,9 +51,8 @@ public class CoffeeStore {
 //        assert coffee != null;
         checkRep(coffee);
         Flavour flavour = flavourFactory.getFlavour();
-        if (coffee.addFlavour(flavour.getName())){
-            coffee.addPrice(flavour.getPrice());
-        }
+        coffee.addFlavour(flavour.getName());
+        coffee.addPrice(flavour.getPrice());
         return coffee;
     }
 
