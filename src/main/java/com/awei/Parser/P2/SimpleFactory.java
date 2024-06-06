@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+/**
+ * immutable
+ */
 public class SimpleFactory {
     private static final HashMap<String, ITypeParserFactory> map = new HashMap<>();
 
