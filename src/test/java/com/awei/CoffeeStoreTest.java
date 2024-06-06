@@ -1,8 +1,6 @@
 package com.awei;
 
-import com.awei.ReFineCoffeeStore.Coffee;
-import com.awei.ReFineCoffeeStore.CoffeeStore;
-import com.awei.ReFineCoffeeStore.DecafCoffee;
+import com.awei.ReFineCoffeeStore.*;
 import org.junit.Test;
 
 import java.util.Objects;
@@ -57,6 +55,8 @@ public class CoffeeStoreTest {
     @Test
     public void testOrderCoffee(){
         CoffeeStore coffeeStore = new CoffeeStore();
+        coffeeStore.setCoffeeFactory(new DecafCoffeeFactory());
+        coffeeStore.setFlavourFactory(new SoyFlavourFactory());
         Coffee coffee = coffeeStore.orderCoffee();
         assertNotNull(coffee);
         assertEquals("Decaf", coffee.getName());
@@ -66,6 +66,8 @@ public class CoffeeStoreTest {
     @Test
     public void testOrderFlavour(){
         CoffeeStore coffeeStore = new CoffeeStore();
+        coffeeStore.setCoffeeFactory(new DecafCoffeeFactory());
+        coffeeStore.setFlavourFactory(new SoyFlavourFactory());
         Coffee coffee = coffeeStore.orderCoffee();
         Coffee coffee1 = coffeeStore.orderFlavour(coffee);
         assertNotNull(coffee1);
